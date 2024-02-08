@@ -6,7 +6,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StepsService {
 
-
   private stepSource = new BehaviorSubject<number>(1);
   currentStep = this.stepSource.asObservable();
 
@@ -16,6 +15,4 @@ export class StepsService {
     this.stepSource.next(step);
   }
 
-
-  
 }
