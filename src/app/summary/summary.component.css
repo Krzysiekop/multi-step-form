@@ -1,3 +1,14 @@
+h2 {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    color: hsl(231, 11%, 63%);
+    padding-bottom: 3rem;
+    font-size: 1.6rem;
+}
+
 .confirm_button {
     padding: 1rem 2rem;
     color: hsl(217, 100%, 97%);
@@ -18,4 +29,33 @@
     position: absolute;
     bottom: 5rem;
     left: 6rem;
+}
+
+.summary{
+    background-color: #f0f6ff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.type{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.addon{
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.type-desc{
+    text-transform: capitalize;
 }

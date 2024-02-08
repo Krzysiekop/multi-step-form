@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StepsService } from '../steps.service';
 import { NgClass, NgIf } from '@angular/common';
+import { OrderDataService } from '../order-data.service';
 
 
 @Component({
@@ -11,19 +12,16 @@ import { NgClass, NgIf } from '@angular/common';
   styleUrl: './select-plan.component.css'
 })
 export class SelectPlanComponent {
-  step: number = 0;
+  step!: number;
   // planType: string = '' || 'arcade' || 'advanced' || 'pro';
-  planType: string = '';
-  timeFrame: string = 'monthly' || 'yearly';
+  planType?: string = this.orderDataService.orderData.planType;
+  timeFrame?: string = this.orderDataService.orderData.timeDuration ;
   totalCost: number = 0;
-  checked = false;
+  checked? : boolean;
 
-
-
-  constructor(private stepService: StepsService) {
+  constructor(private stepService: StepsService, private orderDataService: OrderDataService) {
     this.stepService.currentStep.subscribe(step => this.step = step)
   }
-
 
   toggleDuration() {
     this.checked = !this.checked;
@@ -35,7 +33,6 @@ export class SelectPlanComponent {
       this.timeFrame = 'yearly';
 
     }
-
   }
 
   choosePlan(planType: string) {
@@ -48,10 +45,14 @@ export class SelectPlanComponent {
   }
 
   nextStep() {
+    this.orderDataService.orderData.timeDuration = this.timeFrame;
+    this.orderDataService.orderData.planType = this.planType;
+    console.log(this.orderDataService.orderData)
     this.stepService.changeStep(3)
   }
 
   goBack() {
     this.stepService.changeStep(1)
   }
+
 }

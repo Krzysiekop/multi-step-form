@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
 import { StepsService } from '../steps.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { OrderDataService } from '../order-data.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class PickAddOnsComponent {
   step!: number;
   addon!: string;
 
-  constructor(private stepService: StepsService) {
+  constructor(private stepService: StepsService, private orderDataService: OrderDataService) {
     this.stepService.currentStep.subscribe(step => this.step = step)
   }
 
@@ -27,6 +28,17 @@ export class PickAddOnsComponent {
     else {
       this.addon = addon;
     }
+
+    if(this.addon === 'online'){
+      this.orderDataService.orderData.addonOnline = true;
+    }
+    if(this.addon === 'profile'){
+      this.orderDataService.orderData.addonProfile = true;
+    }
+    if(this.addon === 'storage'){
+      this.orderDataService.orderData.addonStorage = true;
+    }
+
   }
 
   goBack() {
@@ -34,6 +46,7 @@ export class PickAddOnsComponent {
   }
 
   nextStep() {
+    console.log(this.orderDataService.orderData)
     this.stepService.changeStep(4)
   }
 }

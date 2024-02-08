@@ -1,13 +1,36 @@
 <h2> Finishing up</h2>
 
-Double-check everything looks OK before confirming.
+<p>Double-check everything looks OK before confirming.</p>
 
 <!-- Dynamically add subscription and add-on selections here -->
 
-Total (per month/year)
+<div class="summary">
+    <div class="type">
+        <div class="type-desc"> {{ planType }} ({{ timeDuration }})</div>
+        <div class="type_price"> 20zł/yr</div>
+    </div>
+    <hr>
+    <div class="addons">
+        <div class="addon" *ngIf="addonOnline">
+            <div class="addons-type"> Online service</div>
+            <div class="addons-price"> 10$/yr</div>
+        </div>
+        <div class="addon" *ngIf="addonProfile">
+            <div class="addons-type"> Larger storage</div>
+            <div class="addons-price"> $2/mo</div>
+        </div>
+        <div class="addon" *ngIf="addonStorage">
+            <div class="addons-type"> Customizable Profile</div>
+            <div class="addons-price"> 10$/yr</div>
+        </div>
+    </div>
+</div>
+
+<div class="total">
+    <div class="total_type">Total (per month/year) </div>
+    <div class="total_price">+$100yr </div>
+</div>
 
 <button class="confirm_button" (click)="nextStep()">Confirm</button>
 <button class="goback_button" (click)="goBack()">Go Back</button>
-
-
 

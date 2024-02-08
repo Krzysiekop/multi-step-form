@@ -5,7 +5,7 @@
     You have the option of monthly or yearly billing.
 </p>
 <div class="cards">
-    <div class="card" (click)="choosePlan('arcade')"  [ngClass]="{'active_plan': planType === 'arcade' } ">
+    <div class="card" (click)="choosePlan('arcade')" [ngClass]="{'active_plan': planType === 'arcade' } ">
         <img src="assets/images/icon-arcade.svg" alt="" srcset="">
         <div class="card_wrap" *ngIf="timeFrame === 'monthly' ; else elseBlockArcade">
             <div class="card_type"> Arcade </div> <span class="card_price"> $9/mo</span>
@@ -18,7 +18,7 @@
         </ng-template>
     </div>
 
-    <div class="card" (click)="choosePlan('advanced')"  [ngClass]="{'active_plan': planType === 'advanced' } ">
+    <div class="card" (click)="choosePlan('advanced')" [ngClass]="{'active_plan': planType === 'advanced' } ">
         <img src="assets/images/icon-advanced.svg" alt="" srcset="">
         <div class="card_wrap" *ngIf="timeFrame === 'monthly' ; else elseBlockAdv">
             <div class="card_type"> Advanced </div> <span class="card_price"> $12/mo</span>
@@ -31,7 +31,7 @@
         </ng-template>
     </div>
 
-    <div class="card" (click)="choosePlan('pro')"  [ngClass]="{'active_plan': planType === 'pro' } ">
+    <div class="card" (click)="choosePlan('pro')" [ngClass]="{'active_plan': planType === 'pro' } ">
         <img src="assets/images/icon-pro.svg" alt="" srcset="">
         <div class="card_wrap" *ngIf="timeFrame === 'monthly' ; else elseBlockPro">
             <div class="card_type"> Pro </div> <span class="card_price"> $15/mo</span>
@@ -48,10 +48,12 @@
 
 </div>
 <div class="toogle">
-    <span [ngClass]="{'bold': timeFrame === 'monthly' } " > Monthly</span>
-    <input type="checkbox" id="switch"  (click)="toggleDuration()"/><label for="switch">Toggle</label>
+    <span [ngClass]="{'bold': timeFrame === 'monthly' } "> Monthly</span>
+    <input type="checkbox" id="switch" (click)="toggleDuration()" /><label for="switch">Toggle</label>
     <span [ngClass]="{'bold': timeFrame === 'yearly' } "> Yearly </span>
 </div>
 
 <button class="goback_button" (click)="goBack()">Go Back </button>
 <button class="confirm_button" (click)="nextStep()">Next Step </button>
+
+<!-- [checked]="timeFrame === 'yearly' -->

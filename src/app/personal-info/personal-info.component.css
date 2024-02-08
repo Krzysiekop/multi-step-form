@@ -17,11 +17,16 @@ p {
 }
 
 input {
-    padding: 1rem;
+    padding: 1.5rem;
     border: 1px solid black;
     border-radius: 1rem;
     width: 44rem;
 }
+
+input::placeholder{
+    font-weight: 600;
+}
+
 
 label {
     font-size: 1.4rem;
