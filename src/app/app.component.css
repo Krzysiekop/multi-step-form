@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    background-color:  hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 5rem;
+}
+
+.sidebar{
+    background-image: url('/assets/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    width: 274px;
+    height: 568px;
+ }
+
+ .form_content {
+    width: 50rem;
+    position: relative;
+ }

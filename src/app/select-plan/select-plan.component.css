@@ -1,0 +1,133 @@
+h2 {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  color: hsl(231, 11%, 63%);
+  padding-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.cards {
+  display: flex;
+  gap: 5rem;
+}
+
+.card {
+  width: 15rem;
+  height: 17rem;
+  padding: 1.5rem;
+  border: 1px solid hsl(228, 100%, 84%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.card img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.card_price {
+  color: hsl(231, 11%, 63%);
+  font-size: 1.4rem;
+}
+
+.card_type {
+  font-weight: 600;
+}
+
+.toogle {
+  padding: 1rem;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-right: 6rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background-color: aliceblue;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 5rem;
+  height: 2rem;
+  background: hsl(243, 100%, 62%);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 1.4rem;
+  height: 1rem;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked+label {
+  background: hsl(243, 100%, 62%);
+}
+
+input:checked+label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
+
+.confirm_button {
+  padding: 1rem 2rem;
+  color: hsl(217, 100%, 97%);
+  background-color: hsl(213, 96%, 18%);
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 4rem;
+  right: 6rem;
+}
+
+.goback_button {
+  color: grey;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5rem;
+  left: 6rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.card_months {
+  font-size: 1.2rem;
+}
+
+.active_plan {
+  background-color: aliceblue;
+}

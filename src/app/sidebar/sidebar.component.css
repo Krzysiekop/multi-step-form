@@ -1,0 +1,43 @@
+.sidebar_content {
+   text-transform: uppercase;
+}
+
+.sidebar_content {
+   padding-left: 3rem;
+   padding-top: 5rem;
+}
+
+.sidebar_list {
+   display: flex;
+   align-items: center;
+   padding-bottom: 3rem;
+   gap: 2rem;
+}
+
+.sidebar_number {
+   border-radius: 50%;
+   border: 1px solid hsl(217, 100%, 97%);
+   color: hsl(217, 100%, 97%);
+   width: 3rem;
+   height: 3rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.sidebar_wrap {
+   display: flex;
+   flex-direction: column;
+   color: hsl(217, 100%, 97%);
+}
+
+.sidebar_step {
+   font-size: 1.5rem;
+   color: hsl(231, 11%, 63%);
+}
+
+.active {
+   background-color: hsl(206, 94%, 87%);
+   color: black;
+   border: none;
+}

@@ -1,0 +1,21 @@
+<h2>Personal info</h2>
+<p>Please provide your name, email address, and phone number.</p>
+
+<form action="" method="post"  [formGroup]="personalInfoForm" >
+
+    <div class="form_control"  >
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" name="name" id="" placeholder="e.g. Stephen King">
+    </div>
+    <div class="form_control">
+
+        <label for="name">Email Address</label>
+        <input type="email" formControlName="email" name="email" id="" placeholder="e.g. stephenking@lorem.com">
+    </div>
+    <div class="form_control">
+
+        <label for="name">Phone Number</label>
+        <input type="number" formControlName="phone" name="phone" id="" placeholder="e.g. +1 234 567 890">
+    </div>
+    <button class="confirm_button" type="submit"  (click)="handleForm($event)">Next Step</button>
+</form>

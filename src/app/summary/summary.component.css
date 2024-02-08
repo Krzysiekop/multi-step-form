@@ -1,0 +1,21 @@
+.confirm_button {
+    padding: 1rem 2rem;
+    color: hsl(217, 100%, 97%);
+    background-color: hsl(213, 96%, 18%);
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 4rem;
+    right: 6rem;
+}
+
+.goback_button {   
+    color: grey;
+   background-color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5rem;
+    left: 6rem;
+}
