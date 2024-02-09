@@ -6,9 +6,10 @@
 
 <div class="summary">
     <div class="type">
-        <div class="type-desc"> {{ planType }} ({{ timeDuration }})</div>
-        <span (click)="changePlanDuration()">change</span>
-        <!-- <div class="type_price"> 20zł/{{ isOrderMonthly ? 'mo' : 'yr' }}</div> -->
+        <div class="type_wrap">
+            <div class="type-desc"> {{ planType }} ({{ timeDuration }})</div>
+            <span (click)="changePlanDuration()">(change)</span>
+        </div>
 
         <div [ngSwitch]="planType">
             <span class="type_price" *ngSwitchCase="'arcade'">{{isOrderMonthly ? '+$' + monthlyPlanPrices[0] + '/mo' :
@@ -21,7 +22,6 @@
                 +
                 yearlyPlanPrices[2] + '/yr' }}</span>
         </div>
-
 
     </div>
     <hr>

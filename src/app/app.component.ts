@@ -7,12 +7,13 @@ import { PickAddOnsComponent } from './pick-add-ons/pick-add-ons.component';
 import { StepsService } from './steps.service';
 import { NgIf } from '@angular/common';
 import { SummaryComponent } from './summary/summary.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, PersonalInfoComponent, SelectPlanComponent,PickAddOnsComponent, SummaryComponent ,NgIf],
+  imports: [RouterOutlet, SidebarComponent, PersonalInfoComponent, SelectPlanComponent,PickAddOnsComponent, SummaryComponent, ThankyouComponent ,NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

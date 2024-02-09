@@ -48,19 +48,6 @@
 </div>
 <div class="toogle">
 
-    <!-- <span [ngClass]="{'bold': timeFrame === 'monthly' } "> Monthly</span>
-        <input type="checkbox"  id="switch" (click)="toggleDuration()"  [checked]="checked" /><label
-            for="switch">Toggle</label>
-        <span [ngClass]="{'bold': timeFrame === 'yearly' } "> Yearly </span> -->
-
-
-    <!-- <span [ngClass]="{'bold': timeFrame === 'monthly' } ">Monthly</span>
-    <label class="switch">
-        <input type="checkbox" id="switch" (click)="toggleDuration()" >
-        <span class="slider round"></span>
-    </label>
-    <span [ngClass]="{'bold': timeFrame === 'yearly' } "> Yearly </span> -->
-
     <form [formGroup]="checkForm"> 
         <span [ngClass]="{'bold': timeFrame === 'monthly' } ">Monthly</span>
         <label class="switch">
@@ -71,12 +58,7 @@
         <span [ngClass]="{'bold': timeFrame === 'yearly' } "> Yearly </span>
     </form>
 
-
-
-
 </div>
 
 <button class="goback_button" (click)="goBack()">Go Back </button>
 <button class="confirm_button" (click)="nextStep()">Next Step </button>
-
-<!-- [checked]="timeFrame === 'yearly' -->

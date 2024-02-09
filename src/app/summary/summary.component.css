@@ -84,3 +84,14 @@ p {
     color: #9699ab;
     padding: 0.5rem 0;
 }
+
+.type_wrap{
+    display: flex;
+    flex-direction: column;
+    color: #9699ab;
+}
+
+.type_wrap :hover{
+    cursor: pointer;
+}
+
