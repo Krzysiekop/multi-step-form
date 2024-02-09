@@ -7,5 +7,6 @@ export interface orderModel {
     addonOnline? : boolean;
     addonStorage? : boolean;
     addonProfile? : boolean;
+    toggle?: boolean;
 
   }

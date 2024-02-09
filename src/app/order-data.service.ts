@@ -16,6 +16,7 @@ export class OrderDataService {
     addonOnline: false,
     addonStorage: false,
     addonProfile: false,
+    toggle: false,
   }
 
 
