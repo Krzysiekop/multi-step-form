@@ -58,4 +58,29 @@ p {
 
 .type-desc{
     text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: black;
+   
+}
+
+.type_price{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: black;
+ 
+}
+
+.addons-type{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #9699ab;
+    padding: 0.5rem 0;
+}
+
+.addons-price{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #9699ab;
+    padding: 0.5rem 0;
 }

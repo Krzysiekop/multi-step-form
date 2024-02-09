@@ -2,48 +2,53 @@
 <p>
     Add-ons help enhance your gaming experience.
 </p>
+<form [formGroup]="addonsForm">
+    <div class="adds">
+        <div class="add" [ngClass]="{'active_addons':  addon === 'online' }">
+            <div class="add_wrap2">
 
-<div class="adds">
-    <div class="add" (click)="chooseAddons('online')"  [ngClass]="{'active_addons': addon === 'online' }">
-        <div class="add_wrap2" >
+                <input type="checkbox" formControlName="online" name="online" (click)="chooseAddons('online')">
 
-            <input type="checkbox" name="" id="">
-
-            <div class="add_wrap">
-                <span class="add_type">Online service</span>
-                <span class="add_description"> Access to multiplayer games</span>
+                <div class="add_wrap">
+                    <span class="add_type">Online service</span>
+                    <span class="add_description"> Access to multiplayer games</span>
+                </div>
             </div>
+            <span class="add_price" *ngIf="timeDuration === 'monthly'"> +$1/mo</span>
+            <span class="add_price" *ngIf="timeDuration === 'yearly'"> +$10/yr</span>
         </div>
-        <span class="add_price">+$1/mo</span>
-    </div>
 
-    <div class="add" (click)="chooseAddons('storage')"  [ngClass]="{'active_addons': addon === 'storage' }">
-        <div class="add_wrap2">
+        <div class="add" [ngClass]="{'active_addons': addon === 'storage'  }">
+            <div class="add_wrap2">
 
-            <input type="checkbox" name="" id="">
+                <input type="checkbox" formControlName="storage" name="storage" id="" (click)="chooseAddons('storage')">
 
-            <div class="add_wrap">
-                <span class="add_type">Larger storage</span>
-                <span class="add_description"> Extra 1TB of cloud save</span>
+                <div class="add_wrap">
+                    <span class="add_type">Larger storage</span>
+                    <span class="add_description"> Extra 1TB of cloud save</span>
+                </div>
             </div>
+            <span class="add_price" *ngIf="timeDuration === 'monthly'"> +$2/mo</span>
+            <span class="add_price" *ngIf="timeDuration === 'yearly'"> +$20/yr</span>
+
         </div>
-        <span class="add_price">+$2/mo</span>
-    </div>
 
-    <div class="add" (click)="chooseAddons('profile')"  [ngClass]="{'active_addons': addon === 'profile' }">
+        <div class="add" [ngClass]="{'active_addons': addon === 'profile' }">
 
-        <div class="add_wrap2">
+            <div class="add_wrap2">
 
-            <input type="checkbox" name="" id="">
+                <input type="checkbox" formControlName="profile" name="" id="" (click)="chooseAddons('profile')">
 
-            <div class="add_wrap">
-                <span class="add_type">Customizable Profile</span>
-                <span class="add_description"> Custom theme on your profile</span>
+                <div class="add_wrap">
+                    <span class="add_type">Customizable Profile</span>
+                    <span class="add_description"> Custom theme on your profile</span>
+                </div>
             </div>
+            <span class="add_price" *ngIf="timeDuration === 'monthly'"> +$2/mo</span>
+            <span class="add_price" *ngIf="timeDuration === 'yearly'"> +$20/yr</span>
         </div>
-        <span class="add_price">+$2/mo</span>
     </div>
-</div>
+</form>
 
 
 <button class="goback_button" (click)="goBack()">Go Back </button>

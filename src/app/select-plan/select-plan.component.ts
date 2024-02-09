@@ -57,13 +57,7 @@ export class SelectPlanComponent {
       })
       this.orderDataService.orderData.toggle = true;
     }
-
-
-
   }
-
-
-
 
   choosePlan(planType: string) {
     if (this.planType === planType) {
@@ -83,5 +77,4 @@ export class SelectPlanComponent {
   goBack() {
     this.stepService.changeStep(1)
   }
-
 }

@@ -17,16 +17,28 @@ export class OrderDataService {
     addonStorage: false,
     addonProfile: false,
     toggle: false,
+    
+  }
+  price: number = 0;
+
+  private dataSource = new BehaviorSubject<orderModel>(this.orderData);
+  currentData = this.dataSource.asObservable();
+
+  constructor() { }
+
+  changeData(order: orderModel) {
+    this.dataSource.next(order);
   }
 
+  priceAll(){
+    if( this.orderData.timeDuration === 'monthly'){
+        this.price += 12;
+    }
+    if( this.orderData.timeDuration === 'yearly'){
+      this.price += 120;
+  }
 
-  // private personSource = new BehaviorSubject<personalInfoModel>(this.person);
-  // currentPerson = this.personSource.asObservable();
+  }
 
-  // constructor() { }
-
-  // changeQuantity(person: personalInfoModel) {
-  //   this.personSource.next(person);
-  // }
 
 }

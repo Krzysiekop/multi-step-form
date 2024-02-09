@@ -39,12 +39,12 @@ p {
     font-size: 1.4rem;
 }
 
-.add_price{
+.add_price {
     font-size: 1.5rem;
     color: hsl(243, 100%, 62%)
 }
 
-input{
+input {
     width: 2rem;
     height: 2rem;
 }
@@ -61,9 +61,9 @@ input{
     right: 6rem;
 }
 
-.goback_button {   
+.goback_button {
     color: grey;
-   background-color: #fff;
+    background-color: #fff;
     border: none;
     cursor: pointer;
     position: absolute;
@@ -72,5 +72,5 @@ input{
 }
 
 .active_addons {
-    background-color: aliceblue;
-  }
+    /* background-color: aliceblue; */
+}

@@ -8,5 +8,4 @@ export interface orderModel {
     addonStorage? : boolean;
     addonProfile? : boolean;
     toggle?: boolean;
-
   }

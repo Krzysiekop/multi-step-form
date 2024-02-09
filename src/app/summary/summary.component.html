@@ -7,30 +7,44 @@
 <div class="summary">
     <div class="type">
         <div class="type-desc"> {{ planType }} ({{ timeDuration }})</div>
-        <div class="type_price"> 20zł/yr</div>
+        <span (click)="changePlanDuration()">change</span>
+        <!-- <div class="type_price"> 20zł/{{ isOrderMonthly ? 'mo' : 'yr' }}</div> -->
+
+        <div [ngSwitch]="planType">
+            <span class="type_price" *ngSwitchCase="'arcade'">{{isOrderMonthly ? '+$' + monthlyPlanPrices[0] + '/mo' :
+                '+$' +
+                yearlyPlanPrices[0] + '/yr' }}</span>
+            <span class="type_price" *ngSwitchCase="'advanced'">{{isOrderMonthly ? '+$' + monthlyPlanPrices[1] + '/mo' :
+                '+$' +
+                yearlyPlanPrices[1] + '/yr' }}</span>
+            <span class="type_price" *ngSwitchCase="'pro'">{{isOrderMonthly ? '+$' + monthlyPlanPrices[2] + '/mo' :'+$'
+                +
+                yearlyPlanPrices[2] + '/yr' }}</span>
+        </div>
+
+
     </div>
     <hr>
     <div class="addons">
         <div class="addon" *ngIf="addonOnline">
             <div class="addons-type"> Online service</div>
-            <div class="addons-price"> 10$/yr</div>
+            <div class="addons-price"> {{ isOrderMonthly ? "+$1/mo" : "+$10/yr"}}</div>
         </div>
         <div class="addon" *ngIf="addonProfile">
             <div class="addons-type"> Customizable Profile </div>
-            <div class="addons-price"> 10$/yr </div>
+            <div class="addons-price"> {{ isOrderMonthly ? "+$2/mo": "+$20/yr" }} </div>
         </div>
         <div class="addon" *ngIf="addonStorage">
             <div class="addons-type"> Larger storage </div>
-            <div class="addons-price"> $2/mo </div>
+            <div class="addons-price"> {{ isOrderMonthly ? "+$2/mo" : "+$20/yr" }} </div>
         </div>
     </div>
 </div>
 
 <div class="total">
     <div class="total_type">Total (per month/year) </div>
-    <div class="total_price">+$100yr </div>
+    <div class="total_price">+${{totalPrice}}/{{ isOrderMonthly ? 'mo' : 'yr' }} </div>
 </div>
 
 <button class="confirm_button" (click)="nextStep()">Confirm</button>
 <button class="goback_button" (click)="goBack()">Go Back</button>
-
